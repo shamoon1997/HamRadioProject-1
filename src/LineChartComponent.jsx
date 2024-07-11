@@ -19,7 +19,6 @@ const LineChartComponent = ({ data, weekData, currentWeek, setCurrentWeek }) => 
   const currentWeekData = weekData[currentWeek];
   const currentMonth = currentWeekData.length > 0 ? new Date(currentWeekData[0].date).toLocaleString('default', { month: 'long' }) : '';
 
-  // Calculate ticks for y-axis
   const allCounts = currentWeekData.map(entry => entry.count);
   const minCount = Math.min(...allCounts);
   const maxCount = Math.max(...allCounts);
